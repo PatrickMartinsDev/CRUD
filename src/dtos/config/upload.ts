@@ -1,6 +1,8 @@
-import crypto from "crypto";
-import multer from "multer";
+import crypto = require("crypto");
+import multer = require('multer');
 import { resolve } from "path";
+
+// multer works only at multpart/form-data files 
 
 export default {
   upload(folder: string) {

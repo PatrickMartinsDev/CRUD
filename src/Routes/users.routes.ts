@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import multer from 'multer';
+import multer = require('multer');
 
-import uploadConfig from '../config/upload';
+import uploadConfig from '../dtos/config/upload';
 import { ensureAuthenticated } from '../middlewares/ensureAuthenticated';
 import { CreateUserController } from '../accounts/UseCases/createUser/createUserController';
 import { UpdateUserAvatarController } from '../accounts/UseCases/updateUserAvatar/UpdateUserAvatarController';

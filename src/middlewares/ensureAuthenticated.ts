@@ -20,11 +20,11 @@ export async function ensureAuthenticated(request: Request, response: Response, 
     const usersRepository = new UsersRepository.findById(user_id)
 
     if (!user) {
-      throw new Error("User does not exists!", 401);
+      throw new Error("User does not exists!");
     }
 
     next();
   } catch {
-    throw new Error("Invalid token", 401);
+    throw new Error("Invalid token");
   }
 }
